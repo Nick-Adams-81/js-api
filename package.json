@@ -1,0 +1,27 @@
+{
+  "name": "js-api",
+  "version": "1.0.0",
+  "description": "js-api",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nick-Adams-81/js-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nick-Adams-81/js-api/issues"
+  },
+  "homepage": "https://github.com/Nick-Adams-81/js-api#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.3.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
