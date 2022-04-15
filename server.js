@@ -10,3 +10,4 @@ db.once("open", () => console.log("connected to database"))
 
 app.use(express.json())
 app.listen(3000, () => console.log("server started on port 3000!"))
+
