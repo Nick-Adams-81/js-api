@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-
+// subscriber schema
 const subscriberSchema = new mongoose.Schema({
 
     name: {
