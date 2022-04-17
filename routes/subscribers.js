@@ -1,5 +1,4 @@
 const express = require("express")
-const subscriber = require("../models/subscriber")
 const router = express.Router()
 const Subscriber = require("../models/subscriber")
 
@@ -28,7 +27,7 @@ router.post("/", async (req, res) => {
         const newSubscriber = await subscriber.save()
         res.status(201).send(newSubscriber)
     } catch (err) {
-        res.status(400).json({ messgae: err.message })
+        res.status(400).json({ message: err.message })
     }
 })
 // update one
