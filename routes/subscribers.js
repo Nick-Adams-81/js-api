@@ -32,8 +32,19 @@ router.post("/", async (req, res) => {
     }
 })
 // update one
-router.patch("/:id", getSubs, (req, res) => {
-    
+router.patch("/:id", getSubs, async (req, res) => {
+    if(req.body.name != null) {
+        res.subscriber.name = req.body.name
+    }
+    if(req.body.subscribedToChanel != null) {
+        res.subscriber.subscribedToChanel = req.body.subsscribedToChanel
+    }
+    try {
+        const updatedSubscriber = await res.subscriber.save()
+        res.json(updatedSubscriber)
+    } catch (err) {
+        res.status(400).json({ message: err.message})
+    }
 })
 // delete one
 router.delete("/:id", getSubs, async (req, res) => {
